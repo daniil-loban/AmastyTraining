@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+  <head>
+    <css src="Amasty_DaniilLoban::css/beautiful.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <referenceContainer name="content">
+      <block class="Amasty\DaniilLoban\Block\Hello" name="Amasty_DaniilLoban.hello" template="Amasty_DaniilLoban::hello.phtml" />
+      <block class="Amasty\DaniilLoban\Block\Form" name="Amasty_DaniilLoban.form" template="Amasty_DaniilLoban::form.phtml" >
+        <block class="Amasty\DaniilLoban\Block\Timer" name="Amasty_DaniilLoban.timer" template="Amasty_DaniilLoban::timer.phtml" />
+      </block>
+    </referenceContainer>
+    <!--<move element="footer" destination="page.top" after="-" />
+    <referenceContainer name="footer" display="false" />-->
+  </body>
+</page>
