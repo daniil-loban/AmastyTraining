@@ -1,0 +1,29 @@
+body {
+  box-sizing: border-box;
+  border: 10px dashed red;
+}
+
+.order-form > input {
+  margin-bottom: 5px;
+  max-width: 200px;
+}
+
+.order-form > button {
+  box-sizing: border-box;
+  position: relative;
+  left: 340px;
+  padding: 5px 10px 20px 10px;
+  height: 30px;
+  font-weight: bold;
+  background-color: white;
+  border-radius: 120% 30% / 30% 40%;
+  border: 2px solid;
+  border-color:#8bc53f  #f3793b #ffdd15 #26a9e0;
+}
+
+.order-form > button:hover {
+  box-sizing: border-box;
+  background-color: white;
+  border: 5px solid;
+  border-color:#26a9e0 #8bc53f  #f3793b #ffdd15;
+}
