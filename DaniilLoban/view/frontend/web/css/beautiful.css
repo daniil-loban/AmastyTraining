@@ -3,15 +3,23 @@ body {
   border: 10px dashed red;
 }
 
+.main-page {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: center;
+  border: 1px solid lightgrey;
+}
+
 .order-form > input {
   margin-bottom: 5px;
-  max-width: 200px;
+  max-width: 400px;
 }
 
 .order-form > button {
   box-sizing: border-box;
   position: relative;
-  left: 340px;
+  left: 305px;
   padding: 5px 10px 20px 10px;
   height: 30px;
   font-weight: bold;
