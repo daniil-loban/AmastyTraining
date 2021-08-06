@@ -14,7 +14,8 @@ class Hello extends \Magento\Framework\View\Element\Template
         parent::__construct($context, $data);
     }
 
-    public function sayHello($name){
-      return "Hello, world! My name is $name!";
+    public function sayHello($name)
+    {
+        return "Hello, world! My name is $name!";
     }
 }
