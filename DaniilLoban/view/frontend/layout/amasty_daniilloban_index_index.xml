@@ -15,7 +15,5 @@
             </block>
         </container>  
         </referenceContainer>
-        <!--<move element="footer" destination="page.top" after="-" />
-        <referenceContainer name="footer" display="false" />-->
     </body>
 </page>
