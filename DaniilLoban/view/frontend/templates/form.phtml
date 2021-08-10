@@ -1,13 +1,16 @@
 <?php
+
 /** @var \Amasty\DaniilLoban\Block\Form $block */
 $formClassName = $this->hasFormClassName() ? ' ' . $this->getFormClassName() : '';
 ?>
 
 <div class="template">
-    <form action="" onsubmit="return false" class="<?=$formClassName?>">
+    <form action="" onsubmit="return false" class="<?= $formClassName ?>">
         <input type="text" name=”sku” placeholder="Input SKU" />
-        <input type="number" name=”qty” value="0" />
-        <?= $block->getChildHtml(); ?> 
+        <? if ($block->isShowQty()) { ?>
+            <input type='number' name='qty' value='<?= $block->getDefaultQty(); ?>' />
+        <? } ?>
+        <?= $block->getChildHtml(); ?>
         <button type="submit">Send</buton>
-    </form>    
+    </form>
 </div>
