@@ -31,4 +31,8 @@ class Form extends Template
     {
         return (int)$this->scopeConfig->getValue('daniilloban_config/general/default_qty');
     }
+    public function getFormAction()
+    {
+        return $this->getUrl('*/cart/add');
+    }
 }
