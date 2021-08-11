@@ -3,10 +3,9 @@
 /** @var \Amasty\DaniilLoban\Block\Form $block */
 $formClassName = $this->hasFormClassName() ? ' ' . $this->getFormClassName() : '';
 ?>
-
 <div class="template">
-    <form action="" onsubmit="return false" class="<?= $formClassName ?>">
-        <input type="text" name=”sku” placeholder="Input SKU" />
+    <form action="<?= $block->getFormAction() ?>" class="<?= $formClassName ?>">
+        <input type="text" name='sku' placeholder="Input SKU" />
         <? if ($block->isShowQty()) { ?>
             <input type='number' name='qty' value='<?= $block->getDefaultQty(); ?>' />
         <? } ?>
