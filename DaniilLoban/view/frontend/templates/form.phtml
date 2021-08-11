@@ -4,10 +4,10 @@
 $formClassName = $this->hasFormClassName() ? ' ' . $this->getFormClassName() : '';
 ?>
 <div class="template">
-    <form action="<?= $block->getFormAction() ?>" class="<?= $formClassName ?>">
-        <input type="text" name='sku' placeholder="Input SKU" />
+    <form action="<?= $block->getFormAction() ?>" data-mage-init='{"validation":{}}' class="<?= $formClassName ?>">
+        <input type="text" name='sku' placeholder="Input SKU" data-validate='{"required":true, "pattern":"[A-Za-z0-9]*([-][A-Za-z0-9])*", "required-if-all-sku-empty-and-file-not-loaded":true}' />
         <? if ($block->isShowQty()) { ?>
-            <input type='number' name='qty' value='<?= $block->getDefaultQty(); ?>' />
+            <input type='number' name='qty' value='<?= $block->getDefaultQty(); ?>' data-validate='{"required":true, "validate-not-negative-number":true}' />
         <? } ?>
         <?= $block->getChildHtml(); ?>
         <button type="submit">Send</buton>
