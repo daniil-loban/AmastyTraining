@@ -3,6 +3,23 @@
 /** @var \Amasty\DaniilLoban\Block\Timer $block */
 ?>
 
-<div class="template">
-    <p><?= $block->getText() ?></p>
+<div class="template" data-bind="scope: 'coolTimer'">
+    <!-- ko template: getTemplate() -->
+    <!-- /ko -->
 </div>
+
+<script type="text/x-magento-init">
+    {
+        "*":{
+            "Magento_Ui/js/core/app": {
+                "components":{
+                    "coolTimer": {
+                        "component": "Amasty_DaniilLoban/js/koTimer",
+                        "template": "Amasty_DaniilLoban/koTimer"
+                    }
+
+                }
+            }
+        }
+    }
+</script>
