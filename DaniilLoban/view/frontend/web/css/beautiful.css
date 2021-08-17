@@ -19,7 +19,8 @@ body {
 .order-form > button {
   box-sizing: border-box;
   position: relative;
-  left: 305px;
+  left: 150px;
+  margin: 0 auto;
   padding: 5px 10px 20px 10px;
   height: 30px;
   font-weight: bold;
@@ -34,4 +35,100 @@ body {
   background-color: white;
   border: 5px solid;
   border-color:#26a9e0 #8bc53f  #f3793b #ffdd15;
+}
+
+
+.daniilloban-autocomlete-list {
+  position: absolute;
+  background-color: white;
+  z-index: 10;
+}
+
+.daniilloban-autocomlete-list ul:empty{
+  display: none;
+}
+
+.daniilloban-autocomlete-list ul {
+  padding-inline-start: 0;
+  list-style-type: none;
+  margin: 0;
+}
+
+.daniilloban-autocomlete-list > ul > li {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.daniilloban-autocomlete-list ul li:hover {
+  background-color: #ffdd15;
+  cursor: pointer;
+}
+
+.autocomplete-active {
+  background-color: #ffdd15;
+}
+
+.daniilloban-autocomlete-list ul li span:first-child {
+  padding-left: 5px;
+}
+.daniilloban-autocomlete-list ul li span:nth-child(2) {
+  padding-right: 5px;
+  padding-left: 10px;
+  align-self: center;
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #666;
+}
+
+
+@keyframes loading {
+  0% {
+    transform-origin: 100% 100%;
+    transform: rotate(0deg);
+  }
+  100% {
+    transform-origin: 100% 100%;
+    transform: rotate(360deg);
+  }
+}
+
+.loadable[for=daniilloban-seach-input]{
+  position: relative;
+}
+
+.loadable .loading[data-isloading=true] {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  margin: 5px 5px 0 0;
+  right: 0px;
+}
+
+.loadable .loading[data-isloading=true]:before {
+  position: absolute;
+  display: block;
+  content: "";
+  z-index: 12;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #FFF;
+}
+
+.loadable .loading[data-isloading=true]:after {
+  position: absolute;
+  display: block;
+  content: "";
+  z-index: 11;
+  width: 12px;
+  height: 12px;
+  border-radius: 200px 0 0;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0) 0, #459ad7 50%, #459ad7 100%);
+  animation: loading 0.5s linear infinite;
 }

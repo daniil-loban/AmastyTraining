@@ -3,13 +3,30 @@
 /** @var \Amasty\DaniilLoban\Block\Form $block */
 $formClassName = $this->hasFormClassName() ? ' ' . $this->getFormClassName() : '';
 ?>
-<div class="template">
+
+<div class="template coolform" data-bind="scope: 'coolAutocomplete'">
     <form action="<?= $block->getFormAction() ?>" data-mage-init='{"validation":{}}' class="<?= $formClassName ?>">
-        <input type="text" name='sku' placeholder="Input SKU" data-validate='{"required":true, "pattern":"[A-Za-z0-9]*([-][A-Za-z0-9])*", "required-if-all-sku-empty-and-file-not-loaded":true}' />
+        <!-- ko template: getTemplate() -->
+        <!-- /ko -->
         <? if ($block->isShowQty()) { ?>
             <input type='number' name='qty' value='<?= $block->getDefaultQty(); ?>' data-validate='{"required":true, "validate-not-negative-number":true}' />
         <? } ?>
         <?= $block->getChildHtml(); ?>
-        <button type="submit">Send</buton>
+        <button type="submit">Add</buton>
     </form>
 </div>
+
+<script type="text/x-magento-init">
+    {
+        "*":{
+            "Magento_Ui/js/core/app": {
+                "components":{
+                    "coolAutocomplete": {
+                        "component": "Amasty_DaniilLoban/js/koAutocomplete",
+                        "template": "Amasty_DaniilLoban/koAutocomplete"
+                    }
+                }
+            }
+        }
+    }
+</script>
