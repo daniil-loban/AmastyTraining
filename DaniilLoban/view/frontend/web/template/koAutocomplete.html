@@ -1,0 +1,21 @@
+<!--
+   TODO: 1) data-validate='{"required":true, "pattern":"[A-Za-z0-9]*([-][A-Za-z0-9])*", "required-if-all-sku-empty-and-file-not-loaded":true}'
+         2) props: name, placeholder etc.
+-->
+<div>
+    <div class="loadable" for="daniilloban-seach-input">
+        <input name='sku' placeholder="Input SKU" class="form-control" type="text" name="some-search"
+            id="daniilloban-seach-input"
+            data-bind="textInput: searchText, event: {keyup: onKeyUp, valueUpdate: 'afterkeydown'}" spellcheck="false"
+            autocomplete="off">
+        <span class="loading" data-bind="attr: {'data-isloading': isLoading}"></span>
+    </div>
+    <div class="daniilloban-autocomlete-list">
+        <ul data-bind="foreach: searchResult, event: {mouseenter: onMouseEnter}">
+            <li data-bind="click: $parent.onClickList">
+                <span data-bind="text: sku"></span>
+                <span data-bind="text: name"></span>
+            </li>
+        </ul>
+    </div>
+</div>
