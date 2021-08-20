@@ -2,10 +2,15 @@
 
 namespace Amasty\SecondDaniilLoban\Plugin;
 
-use \Magento\Framework\UrlInterface;
+use Magento\Framework\UrlInterface;
 
 class ChangeFormAction
 {
+    /**
+     * @var ProductRepositoryInterface
+     */
+    private $productRepository;
+
     /**
      * @var UrlInterface;
      */
@@ -16,22 +21,11 @@ class ChangeFormAction
     ) {
         $this->urlBuilder = $urlBuilder;
     }
-    /*
-    public function beforeGetFormAction($subject)
-    {
-        return [];
-    }
-    */
-    public function aroudGetFormAction(
-        $subject,
-        callable $proceed
-    ) {
-        return; //skip
-    }
+
     public function afterGetFormAction(
         $subject,
         $result
     ) {
-        return $this->urlBuilder->getUrl('checkout/cart/add');
+        return $this->urlBuilder->getUrl("checkout/cart/add");
     }
 }

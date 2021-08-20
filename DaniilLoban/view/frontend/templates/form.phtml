@@ -5,7 +5,7 @@ $formClassName = $this->hasFormClassName() ? " " . $this->getFormClassName() : "
 ?>
 
 <div class="template coolform" data-bind="scope: 'coolAutocomplete'">
-    <form action="<?= $block->getFormAction() ?>" data-mage-init='{"validation":{}}' class="<?= $formClassName ?>">
+    <form action="<?= $block->getFormAction() ?>" method="POST" data-mage-init='{"validation":{}}' class="<?= $formClassName ?>">
         <!-- ko template: getTemplate() -->
         <!-- /ko -->
         <? if ($block->isShowQty()) { ?>

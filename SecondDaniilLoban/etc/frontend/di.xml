@@ -4,4 +4,7 @@
     <type name="Amasty\DaniilLoban\Block\Form">
         <plugin name="changeFormAction" type="Amasty\SecondDaniilLoban\Plugin\ChangeFormAction" />
     </type>
+    <type name="Magento\Checkout\Controller\Cart\Add">
+        <plugin name="addProductIdToRequest" type="Amasty\SecondDaniilLoban\Plugin\AddProductIdToRequest" />
+    </type>
 </config>
