@@ -1,4 +1,4 @@
-define(['ko', 'jquery', 'uiComponent', 'mage/url'], function(ko, $, Component, urlBuilder) {
+define(["ko", "jquery", "uiComponent", "mage/url"], function(ko, $, Component, urlBuilder) {
     var componentMixin = {
         handleAutocomplete: function (searchValue) {
             if (this.isChoosing()) return;

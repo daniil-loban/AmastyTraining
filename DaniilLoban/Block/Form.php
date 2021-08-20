@@ -24,15 +24,15 @@ class Form extends Template
 
     public function isShowQty()
     {
-        return $this->scopeConfig->getValue('daniilloban_config/general/is_show_qty');
+        return $this->scopeConfig->getValue("daniilloban_config/general/is_show_qty");
     }
 
     public function getDefaultQty()
     {
-        return (int)$this->scopeConfig->getValue('daniilloban_config/general/default_qty');
+        return (int)$this->scopeConfig->getValue("daniilloban_config/general/default_qty");
     }
     public function getFormAction()
     {
-        return $this->getUrl('*/cart/add');
+        return $this->getUrl("*/cart/add");
     }
 }

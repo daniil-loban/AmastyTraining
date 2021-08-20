@@ -17,7 +17,7 @@ abstract class ConfigProviderAbstract implements ConfigProviderInterface
      *
      * @var string
      */
-    protected $pathPrefix = 'daniilloban_config/';
+    protected $pathPrefix = "daniilloban_config/";
 
     /**
      * @param ScopeConfigInterface $scopeConfig
@@ -28,7 +28,7 @@ abstract class ConfigProviderAbstract implements ConfigProviderInterface
         $this->scopeConfig = $scopeConfig;
     }
 
-    protected function GetValue($path, $storeId, $scope = 'store')
+    protected function GetValue($path, $storeId, $scope = "store")
     {
         return $this->scopeConfig->getValue(
             $this->pathPrefix . $path,

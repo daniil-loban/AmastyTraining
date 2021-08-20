@@ -23,24 +23,24 @@ class ConfigProvider extends ConfigProviderAbstract
     {
         $storeId = $this->session->getStoreId();
         return [
-            'enabled' => $this->getIsEnabled($storeId),
-            'is_show_qty' => $this->getIsShowQtyField($storeId),
-            'default_qty' => $this->getQtyFieldDefaultValue($storeId)
+            "enabled" => $this->getIsEnabled($storeId),
+            "is_show_qty" => $this->getIsShowQtyField($storeId),
+            "default_qty" => $this->getQtyFieldDefaultValue($storeId)
         ];
     }
 
     public function getIsEnabled($storeId)
     {
-        return (bool)$this->GetValue('/general/enabled', $storeId);
+        return (bool)$this->GetValue("/general/enabled", $storeId);
     }
 
     public function getIsShowQtyField($storeId)
     {
-        return (bool)$this->GetValue('/general/is_show_qty', $storeId);
+        return (bool)$this->GetValue("/general/is_show_qty", $storeId);
     }
 
     public function getQtyFieldDefaultValue($storeId)
     {
-        return (int)$this->GetValue('/general/default_qty', $storeId);
+        return (int)$this->GetValue("/general/default_qty", $storeId);
     }
 }

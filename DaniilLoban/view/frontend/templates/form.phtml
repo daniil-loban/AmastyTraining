@@ -1,7 +1,7 @@
 <?php
 
 /** @var \Amasty\DaniilLoban\Block\Form $block */
-$formClassName = $this->hasFormClassName() ? ' ' . $this->getFormClassName() : '';
+$formClassName = $this->hasFormClassName() ? " " . $this->getFormClassName() : "";
 ?>
 
 <div class="template coolform" data-bind="scope: 'coolAutocomplete'">
@@ -9,7 +9,7 @@ $formClassName = $this->hasFormClassName() ? ' ' . $this->getFormClassName() : '
         <!-- ko template: getTemplate() -->
         <!-- /ko -->
         <? if ($block->isShowQty()) { ?>
-            <input type='number' name='qty' value='<?= $block->getDefaultQty(); ?>' data-validate='{"required":true, "validate-not-negative-number":true}' />
+            <input type="number" name="qty" value="<?= $block->getDefaultQty(); ?>" data-validate='{"required":true, "validate-not-negative-number" :true}' />
         <? } ?>
         <?= $block->getChildHtml(); ?>
         <button type="submit">Add</buton>

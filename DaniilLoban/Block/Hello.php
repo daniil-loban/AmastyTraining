@@ -29,6 +29,6 @@ class Hello extends Template
 
     public function sayHelloFromConfig($name)
     {
-        return $this->scopeConfig->getValue('daniilloban_config/general/greeting_text');
+        return $this->scopeConfig->getValue("daniilloban_config/general/greeting_text");
     }
 }
