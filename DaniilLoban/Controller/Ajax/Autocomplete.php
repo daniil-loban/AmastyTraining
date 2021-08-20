@@ -57,9 +57,9 @@ class Autocomplete extends Action
     {
         $productCollection = $this->productCollectionFactory->create();
         $productCollection
-            ->addAttributeToSelect(['name'])
-            ->addAttributeToFilter('type_id', ["eq" => "simple"])
-            ->addAttributeToFilter('sku', ['like' => $sku . "%"])
+            ->addAttributeToSelect(["name"])
+            ->addAttributeToFilter("type_id", ["eq" => "simple"])
+            ->addAttributeToFilter("sku", ["like" => $sku . "%"])
             ->setPageSize(20, 1);
 
         $productCollection->getItems();
@@ -79,10 +79,10 @@ class Autocomplete extends Action
     {
         $resultJson = $this->resultJsonFactory->create();
         $params = $this->getRequest()->getParams();
-        if (!isset($params['sku'])) {
+        if (!isset($params["sku"])) {
             return $resultJson->setData([]);
         }
-        $sku = utf8_decode(urldecode($params['sku']));
+        $sku = utf8_decode(urldecode($params["sku"]));
         $products = $this->getProuctsList($sku);
         return $resultJson->setData(["q" => $sku, "list" => $products]);
     }

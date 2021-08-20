@@ -24,7 +24,7 @@ class Index extends Action
 
     public function execute()
     {
-        if ($this->scopeConfig->isSetFlag('daniilloban_config/general/enabled')) {
+        if ($this->scopeConfig->isSetFlag("daniilloban_config/general/enabled")) {
             return $this->resultFactory->create(ResultFactory::TYPE_PAGE);
         } else {
             die("Sorry, the component is disabled.");

@@ -1,7 +1,7 @@
-define(['ko', 'jquery', 'uiComponent', 'mage/url'], function(ko, $, Component, urlBuilder) {
+define(["ko", "jquery", "uiComponent", "mage/url"], function(ko, $, Component, urlBuilder) {
   return Component.extend({
     defaults: {
-        searchText: '',
+        searchText: "",
         searchUrl: urlBuilder.build("daniilloban/ajax/autocomplete"),
         searchResult: [],
         isLoading: false,
@@ -10,7 +10,7 @@ define(['ko', 'jquery', 'uiComponent', 'mage/url'], function(ko, $, Component, u
     },
     initObservable: function () {
         this._super();
-        this.observe(['searchText', 'searchResult', 'isLoading', 'isChoosing', 'selectedIndex']);
+        this.observe(["searchText", "searchResult", "isLoading", "isChoosing", "selectedIndex"]);
         return this;
     },
     initialize: function () {
@@ -30,8 +30,9 @@ define(['ko', 'jquery', 'uiComponent', 'mage/url'], function(ko, $, Component, u
     },
     onMouseEnter: function (data, event) {
         //this.onClickList(searchResult[0]);
+        items = this._getAutocomleteListItems(event.target);
         $(items[this.selectedIndex()])
-            .removeClass('autocomplete-active')
+            .removeClass("autocomplete-active")
     },
     onKeyUp: function (data, event) {
         var { keyCode } = event;
@@ -40,7 +41,7 @@ define(['ko', 'jquery', 'uiComponent', 'mage/url'], function(ko, $, Component, u
             if (items.length === 0) return;
             var currIndex = this.selectedIndex();
             if (currIndex >= 0 && currIndex < 20) {
-                $(items[currIndex]).removeClass('autocomplete-active')    
+                $(items[currIndex]).removeClass("autocomplete-active")
             }
             if (keyCode === 13 && currIndex >= 0 && currIndex < 20) {
                 this.onClickList(this.searchResult()[currIndex]);
@@ -51,7 +52,7 @@ define(['ko', 'jquery', 'uiComponent', 'mage/url'], function(ko, $, Component, u
             if (keyCode === 38 && currIndex > -1) {
                 this.selectedIndex(this.selectedIndex() - 1)
             }
-            $(items[this.selectedIndex()]).addClass('autocomplete-active')
+            $(items[this.selectedIndex()]).addClass("autocomplete-active")
         }
     },
     handleAutocomplete: function (searchValue) {

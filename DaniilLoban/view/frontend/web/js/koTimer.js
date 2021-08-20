@@ -1,14 +1,14 @@
-define(['jquery', 'uiComponent'], function($, Component) {
+define(["jquery", "uiComponent"], function($, Component) {
   return Component.extend({
     defaults: {
         currentSeconds: 0,
-        currentState: 'stop',
-        formatedTime: '00:00:00',
+        currentState: "stop",
+        formatedTime: "00:00:00",
         interval: null
     },
     initObservable: function () {
         this._super();
-        this.observe(['currentSeconds', 'currentState', 'interval', 'formatedTime']);
+        this.observe(["currentSeconds", "currentState", "interval", "formatedTime"]);
         return this;
     },
     initialize: function () {
@@ -21,14 +21,14 @@ define(['jquery', 'uiComponent'], function($, Component) {
     },
     handleChangeState: function (state) {
         switch (state) {
-            case 'start':
+            case "start":
                 this._runTimer();
                 break;
-            case 'stop':
+            case "stop":
                 this._clearInterval();
                 this._resetTime();
                 break;
-            case 'pause':
+            case "pause":
                 this._clearInterval();
                 break;
             default:
@@ -60,21 +60,21 @@ define(['jquery', 'uiComponent'], function($, Component) {
         if (this._hasInterval()) clearInterval(this.interval());
     },
     startTimer: function () {
-        if (this.currentState() === 'start') {
+        if (this.currentState() === "start") {
             this._resetTime();
         }
-        this.currentState('start')
+        this.currentState("start")
     },
     stopTimer: function() {
-        this.currentState('stop')
+        this.currentState("stop")
     },
     pauseTimer: function() {
         switch (this.currentState()) {
-            case 'start':
-                this.currentState('pause');
+            case "start":
+                this.currentState("pause");
                 break;
-            case 'pause':
-                this.currentState('start');
+            case "pause":
+                this.currentState("start");
                 break;
             default:
                 break;
