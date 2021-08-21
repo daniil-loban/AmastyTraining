@@ -1,0 +1,17 @@
+{
+    "name": "amasty/second-daniil-loban",
+    "type": "magento2-module",
+    "description": "Test",
+    "version": "0.0.1",
+    "require": {
+        "php": "~7.3.0||~7.4.0"
+    },
+    "autoload": {
+        "files": [
+          "registration.php"
+        ],
+        "psr-4": {
+          "Amasty\\SecondDaniilLoban\\": ""
+        }
+    }
+}

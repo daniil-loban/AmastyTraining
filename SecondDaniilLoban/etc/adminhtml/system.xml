@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+  <system>
+    <tab id="Amasty_SecondDaniilLoban" translate="label" sortOrder="10">
+      <label>Amasty Second Daniil Loban</label>
+    </tab>
+    <section id="seconddaniilloban_config" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+      <label>Second Daniil Loban Config</label>
+      <tab>Amasty_SecondDaniilLoban</tab>
+      <resource>Amasty_SecondDaniilLoban::config</resource>
+      <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+        <label>General Configuration</label>
+        <field id="promo_sku" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+          <label>Promo SKU</label>
+        </field>
+        <field id="for_sku" translate="label" type="textarea" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+          <label>For SKU</label>
+        </field>
+      </group>
+    </section>
+  </system>
+</config>

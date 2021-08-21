@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <seconddaniilloban_config>
+            <general>
+                <promo_sku>Freeware</promo_sku>
+                <for_sku>MJ01-M-Red</for_sku>    
+            </general>
+        </seconddaniilloban_config>
+    </default>
+</config>
