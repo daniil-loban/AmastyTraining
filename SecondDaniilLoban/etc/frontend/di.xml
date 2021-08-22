@@ -4,7 +4,11 @@
     <type name="Amasty\DaniilLoban\Block\Form">
         <plugin name="changeFormAction" type="Amasty\SecondDaniilLoban\Plugin\ChangeFormAction" />
     </type>
+    <type name="Amasty\DaniilLoban\Controller\Cart\Add">
+        <plugin name="promptPromo" type="Amasty\SecondDaniilLoban\Plugin\PromptPromo" />
+    </type>
     <type name="Magento\Checkout\Controller\Cart\Add">
         <plugin name="addProductIdToRequest" type="Amasty\SecondDaniilLoban\Plugin\AddProductIdToRequest" />
+        <plugin name="promptPromo" type="Amasty\SecondDaniilLoban\Plugin\PromptPromo" />
     </type>
 </config>

@@ -67,7 +67,6 @@ class Add extends Action
     {
         $params = $this->getRequest()->getParams();
         if (!isset($params["sku"]) ||  !isset($params["qty"])) {
-            $this->helper->log("Error");
             return false;
         }
 
