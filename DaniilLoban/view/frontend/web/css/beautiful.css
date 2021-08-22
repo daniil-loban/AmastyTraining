@@ -11,6 +11,14 @@ body {
   border: 1px solid lightgrey;
 }
 
+.order-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding: 5px;
+}
+
 .order-form > input {
   margin-bottom: 5px;
   max-width: 400px;
@@ -18,8 +26,6 @@ body {
 
 .order-form > button {
   box-sizing: border-box;
-  position: relative;
-  left: 150px;
   margin: 0 auto;
   padding: 5px 10px 20px 10px;
   height: 30px;
@@ -29,6 +35,8 @@ body {
   border: 2px solid;
   border-color:#8bc53f  #f3793b #ffdd15 #26a9e0;
 }
+
+
 
 .order-form > button:hover {
   box-sizing: border-box;
@@ -49,6 +57,7 @@ body {
 }
 
 .daniilloban-autocomlete-list ul {
+  width: max-content;
   padding-inline-start: 0;
   list-style-type: none;
   margin: 0;
