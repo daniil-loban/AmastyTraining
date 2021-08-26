@@ -2,9 +2,9 @@
 
 namespace Amasty\DaniilLoban\Block;
 
-use Magento\Framework\View\Element\Template\Context;
 use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Framework\View\Element\Template;
+use Magento\Framework\View\Element\Template\Context;
 
 class Hello extends Template
 {

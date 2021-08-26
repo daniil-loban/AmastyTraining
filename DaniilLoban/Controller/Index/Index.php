@@ -4,8 +4,8 @@ namespace Amasty\DaniilLoban\Controller\Index;
 
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
-use Magento\Framework\Controller\ResultFactory;
 use Magento\Framework\App\Config\ScopeConfigInterface;
+use Magento\Framework\Controller\ResultFactory;
 
 class Index extends Action
 {

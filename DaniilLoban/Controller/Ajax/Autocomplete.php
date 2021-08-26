@@ -2,13 +2,12 @@
 
 namespace Amasty\DaniilLoban\Controller\Ajax;
 
+use Magento\Catalog\Api\ProductRepositoryInterface;
+use Magento\Catalog\Model\ResourceModel\Product\CollectionFactory as ProductCollectionFactory;
+use Magento\Checkout\Model\Session as CheckoutSession;
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
 use Magento\Framework\App\Config\ScopeConfigInterface;
-use Magento\Checkout\Model\Session as CheckoutSession;
-use Magento\Catalog\Api\ProductRepositoryInterface;
-use Magento\Catalog\Model\ResourceModel\Product\CollectionFactory as ProductCollectionFactory;
-
 use Magento\Framework\Controller\Result\JsonFactory;
 
 class Autocomplete extends Action
