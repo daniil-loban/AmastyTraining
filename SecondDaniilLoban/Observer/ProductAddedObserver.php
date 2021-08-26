@@ -3,16 +3,16 @@
 namespace Amasty\SecondDaniilLoban\Observer;
 
 
-use Magento\Framework\Event\ObserverInterface;
-use Magento\Framework\Event\Observer;
-use Magento\Framework\App\Config\ScopeConfigInterface;
-use Magento\Framework\Data\Form\FormKey;
-use Magento\Checkout\Model\Cart;
-use Magento\Catalog\Model\Product;
 use Magento\Catalog\Api\ProductRepositoryInterface;
-use Magento\Checkout\Model\Session as CheckoutSession;
+use Magento\Catalog\Model\Product;
 use Magento\Catalog\Model\ResourceModel\Product\CollectionFactory as ProductCollectionFactory;
+use Magento\Checkout\Model\Cart;
+use Magento\Checkout\Model\Session as CheckoutSession;
+use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Framework\App\RequestInterface;
+use Magento\Framework\Data\Form\FormKey;
+use Magento\Framework\Event\Observer;
+use Magento\Framework\Event\ObserverInterface;
 
 class ProductAddedObserver implements ObserverInterface
 {
