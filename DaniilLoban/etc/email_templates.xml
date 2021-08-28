@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Email:etc/email_templates.xsd">
+    <template 
+        id="amasty_daniilloban_blacklist_template" 
+        label="Blacklist Template" 
+        file="blacklist_template.html" 
+        type="html" 
+        module="Amasty_DaniilLoban" 
+        area="frontend"
+    />
+    <template
+        id="daniilloban_config_cron_group_email_template"
+        label="Blacklist Template" 
+        file="blacklist_template.html" 
+        type="html" 
+        module="Amasty_DaniilLoban" 
+        area="frontend"
+    />    
+</config>
