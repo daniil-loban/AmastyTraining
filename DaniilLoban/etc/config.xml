@@ -12,6 +12,7 @@
             <cron_group>
                 <email_template>amasty_daniilloban_blacklist_template</email_template>
                 <email>user@amasty.com</email>
+                <frequency>* * * * *</frequency>
             </cron_group>
         </daniilloban_config>
     </default>
