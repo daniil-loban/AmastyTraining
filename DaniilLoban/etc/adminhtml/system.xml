@@ -50,6 +50,9 @@
                     <label>Blacklist Notification Template</label>
                     <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
                 </field>
+                <field id="frequency" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Frequency</label>
+                </field>                
             </group>
         </section>
     </system>
