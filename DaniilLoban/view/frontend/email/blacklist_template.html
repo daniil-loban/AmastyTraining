@@ -1,0 +1,19 @@
+<!--@subject Amasty Daniil Loban Blacklist Notification @-->
+<!--@vars
+{
+"var sku": "Blacklist Item SKU",
+"var name": "Blacklist Item Name",
+"var limit": "Blacklist Limit",
+"var available": "Available in Store"
+}
+@-->
+{{template config_path="design/email/header_template"}}
+<h2>{{layout
+  handle="amasty_daniilloban_email"
+  name=$name
+  area="frontend"
+  }}</h2>
+<p>{{trans "Your blacklist item with sku %sku" sku=$sku}}</p>
+<p>limited:{{var limit}}</p>
+<p>available:{{var available}}</p>
+{{template config_path="design/email/footer_template"}}

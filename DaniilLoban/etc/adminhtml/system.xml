@@ -39,6 +39,18 @@
                     </depends>
                 </field>
             </group>
+            <group id="cron_group" translate="label" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Cron Configuration</label>
+                <field id="email" translate="label comment" type="text" sortOrder="20" showInDefault="1"
+                       showInWebsite="1" showInStore="0">
+                    <label>Email</label>
+                    <validate>validate-email</validate>
+                </field>
+                <field id="email_template" translate="label comment" type="select" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Blacklist Notification Template</label>
+                    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+                </field>
+            </group>
         </section>
     </system>
 </config>

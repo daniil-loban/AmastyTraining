@@ -6,9 +6,10 @@ use Magento\Framework\Model\AbstractModel;
 
 class BlacklistItem extends AbstractModel
 {
-
-  protected function _construct()
-  {
-    ResourceModel\BlacklistItem::class;
-  }
+    protected function _construct()
+    {
+        $this->_init(
+            ResourceModel\BlacklistItem::class
+        );
+    }
 }
